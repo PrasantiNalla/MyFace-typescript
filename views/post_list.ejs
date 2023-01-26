@@ -7,24 +7,28 @@
 
 <main>
     <h1>Posts</h1>
-    <ol>
-        <% postList.results.forEach(function(post) {%>
-            <li>
-                <%= post.message %> - <%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss" ) %>
-                        <form method="post" action="/posts/<%=post.id%>/like/">
-                            <button type="submit">Like</button>
-                            <button type="submit" formaction="/posts/<%=post.id%>/dislike/"> Dislike </button>
-                        </form>
-            </li>
-            <% }); %>
+    <section>
+        <ol>
+            <% postList.results.forEach(function(post) {%>
+                <li>
+                    <%= post.message %> - <%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss" ) %>
+                            <form method="post" action="/posts/<%=post.id%>/like/">
+                                <button type="submit">Like</button>
+                                <button type="submit" formaction="/posts/<%=post.id%>/dislike/"> Dislike </button>
+                            </form>
+                </li>
+                <% }); %>
 
-    </ol>
+        </ol>
+    </section>
     <%if (postList.next) { %>
         <a href="<%= postList.next %>">Next</a>
         <% } %>
             <%if (postList.previous) { %>
                 <a href="<%= postList.previous %>">Previous</a>
                 <% } %>
+
+                    <p> <a href="/posts/create">Create Post</a></p>
 
 </main>
 <footer><%- include('_footer') -%></footer>

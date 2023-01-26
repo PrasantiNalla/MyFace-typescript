@@ -1,23 +1,24 @@
 <html lang="en-gb">
-<%- include('_head') -%>
-    <%- include('_header') -%>
+<header><%- include('_head') -%>
+        <nav> <%- include('_header') -%></nav>
+</header>
 
-        <body>
-            <h1>Create Post</h1>
-            <form method="post" action="/posts/create">
-                <label>
-                    Message
-                    <input type="text" name="message" required />
+<main>
+    <h1>Create Post</h1>
+    <section>
+        <form method="post" action="/posts/create">
+            <label>
+                Message
+                <input type="text" name="message" required />
 
-                </label>
-                <label>
-                    ImageUrl
-                    <input type="url" name="imageUrl" required />
+            </label>
+            <label>
+                ImageUrl
+                <input type="url" name="imageUrl" required />
 
-                </label>
-                <button type="submit">Submit</button>
-            </form>
-        </body>
-        <%- include('_footer') -%>
-
-</html>
+            </label>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</main>
+<footer>><%- include('_footer') -%></footer </html>
