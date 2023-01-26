@@ -7,7 +7,7 @@
 </header>
 
 <main>
-    <h1>Users</h1>
+    <h2>Users</h2>
     <ol>
         <% results.forEach(function(user) {%>
             <li>
@@ -21,7 +21,7 @@
             <%if (previous) { %>
                 <a href="<%= previous %>">Previous</a>
                 <% } %>
-                    <p> <a href="/users/create">Create User</a></p>
+                     <a href="/users/create">Create User</a>
 </main>
 <footer>
     <%- include('_footer') -%>
