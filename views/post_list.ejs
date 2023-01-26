@@ -13,7 +13,7 @@
                 <%= post.message %> - <%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss" ) %>
                         <form method="post" action="/posts/<%=post.id%>/like/">
                             <button type="submit">Like</button>
-                            <button type="submit" formaction="</posts/<%=post.id%>/dislike/"> Dislike </button>
+                            <button type="submit" formaction="/posts/<%=post.id%>/dislike/"> Dislike </button>
                         </form>
             </li>
             <% }); %>
