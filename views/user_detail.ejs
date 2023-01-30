@@ -1,8 +1,74 @@
 <html lang="en-gb">
-<%- include('_head') -%>
-<%- include('_header') -%>
-<body>
-<h1><%= name %></h1>
-</body>
-<%- include('_footer') -%>
+
+<header>
+    <%- include('_head') -%>
+
+</header>
+<nav><%- include('_header') -%>
+</nav>
+
+<main>
+    <div class="user">
+        <img class="cover-image" src="<%= coverImageUrl %>" alt="cover image">
+        <div class="user-display-details">
+            <img class="profile-image" src="<%= profileImageUrl %>" alt="profile image">
+            <p class="name">
+                <%= name %>
+            </p>
+            <p class="username">
+                <%= username %>
+            </p>
+            <p class="email">
+                <%= email %>
+            </p>
+        </div>
+    </div>
+
+    <div class="post">
+        <div>
+            <h3>
+                <%= name%>'s Posts
+            </h3>
+        </div>
+        <br />
+        <% posts.forEach(function(post) {%>
+            <div class="card">
+                <img src="<%= post.imageUrl %>">
+
+                <%= post.createdAt %>
+                    <%= post.message %>
+
+            </div>
+            <%})%>
+
+    </div>
+
+    <div class="post">
+        <h3>Likes</h3>
+        <% likes.forEach(post=>{%>
+            <div class="card">
+                <img src="<%= post.imageUrl %>">
+                <%= post.createdAt %>
+                    <%= post.message %>
+            </div>
+            <%})%>
+
+    </div>
+
+
+    <div class="post">
+        <h3>Dislikes</h3>
+        <% dislikes.forEach(post=>{%>
+            <div class="card">
+                <img src="<%= post.imageUrl %>">
+                <%= post.createdAt %>
+                    <%= post.message %>
+            </div>
+            <%})%>
+    </div>
+
+
+</main>
+<footer><%- include('_footer') -%></footer>
+
 </html>

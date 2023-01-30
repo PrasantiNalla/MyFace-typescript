@@ -1,9 +1,10 @@
 <html lang="en-gb">
 <header>
     <%- include('_head') -%>
-        <nav><%- include('_header') -%>
-        </nav>
+
 </header>
+<nav><%- include('_header') -%>
+</nav>
 
 <main>
     <section>
@@ -12,16 +13,13 @@
         <ol>
             <% postList.results.forEach(function(post) {%>
                 <li>
-                    <img src="<%= post.imageUrl %>" width="300" height="300"> <br>
-                    <%= post.message %> - <%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss" ) %>
 
+                    <%= post.message %> - <%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss" ) %><br>
+                            <img src="<%= post.imageUrl %>">
                             <form method="post" action="/posts/<%=post.id%>/like/">
-                                <button type="submit"> <img
-                                        src="https://thumbs.dreamstime.com/z/thumb-up-emoticon-design-showing-47854113.jpg"
-                                        width="30" height="30"> </button>
-                                <button type="submit" formaction="/posts/<%=post.id%>/dislike/"> <img
-                                        src="https://thumbs.dreamstime.com/z/cartoon-dislike-smile-emoticon-illustration-55846504.jpg"
-                                        width="30" height="30"> </button>
+                                <button id="like" type="submit">Like </button>
+                                <button id="dislike" type="submit"
+                                    formaction="/posts/<%=post.id%>/dislike/">Dislike</button>
                             </form>
                 </li>
                 <% }); %>
@@ -35,7 +33,7 @@
                 <a href="<%= postList.previous %>">Previous</a>
                 <% } %>
 
-                    <a href="/posts/create">Create Post</a>
+                    <!-- <a href="/posts/create">Create Post</a> -->
 
 </main>
 <footer><%- include('_footer') -%></footer>

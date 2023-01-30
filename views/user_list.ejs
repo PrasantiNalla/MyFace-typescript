@@ -1,19 +1,22 @@
 <html lang="en-gb">
 <header>
     <%- include('_head') -%>
-        <nav>
-            <%- include('_header') -%>
-        </nav>
+
 </header>
+<nav>
+    <%- include('_header') -%>
+</nav>
 
 <main>
     <h2>Users</h2>
     <ol>
         <% results.forEach(function(user) {%>
             <li>
-                <%= user.name %>
-            </li>
-            <% }); %>
+
+                <a href="/users/<%=user.id%>">
+                    <%= user.name %>
+                </a>
+                <% }); %>
     </ol>
     <%if (next) { %>
         <a href="<%= next %>">Next</a>
@@ -21,7 +24,7 @@
             <%if (previous) { %>
                 <a href="<%= previous %>">Previous</a>
                 <% } %>
-                     <a href="/users/create">Create User</a>
+                    <a href="/users/create">Create User</a>
 </main>
 <footer>
     <%- include('_footer') -%>
