@@ -1,72 +1,96 @@
 <html lang="en-gb">
-
-<header>
-    <%- include('_head') -%>
-
+<header><%- include('_head') -%>
+        <nav><%- include('_header') -%></nav>
 </header>
-<nav><%- include('_header') -%>
-</nav>
 
 <main>
-    <div class="user">
-        <img class="cover-image" src="<%= coverImageUrl %>" alt="cover image">
-        <div class="user-display-details">
-            <img class="profile-image" src="<%= profileImageUrl %>" alt="profile image">
-            <p class="name">
-                <%= name %>
-            </p>
-            <p class="username">
-                <%= username %>
-            </p>
-            <p class="email">
-                <%= email %>
-            </p>
+    <section class="user">
+
+        <img class="coverImage" src="<%= coverImageUrl %>" alt="cover image">
+        <div class="profile">
+            <img class="profile_image" src="<%= profileImageUrl %>" alt="profile image">
+            <ul>
+                <li>
+                    <%= name %>
+                </li>
+                <li>
+                    <%= username %>
+                </li>
+                <li>
+                    <%= email %>
+                </li>
+            </ul>
         </div>
-    </div>
-    <div class="posts-likes-dislikes">
-        <div class="post">
-            <div>
-                <h3>
-                    <%= name%>'s Posts
-                </h3>
-            </div>
-            <br />
-            <% posts.forEach(function(post) {%>
+    </section>
+
+    <section>
+        <p class="posts_types">Posts</p>
+        <div class="posts">
+            <%for(let i=0;i<6;i++ ) {%>
                 <div class="card">
-                    <img src="<%= post.imageUrl %>">
-
-                    <%= post.createdAt %>
-                        <%= post.message %>
-
+                    <img class="card_image" src="<%= posts[i].imageUrl %>">
+                    <div class="card_body">
+                        <h4>
+                            <%=name%>
+                        </h4>
+                        <h4>
+                            <%= posts[i].createdAt %>
+                        </h4>
+                        <p class="message">
+                            <%= posts[i].message %>
+                        </p>
+                    </div>
                 </div>
-                <%})%>
-
+                <%}%>
         </div>
 
-        <div class="post">
-            <h3>Likes</h3>
-            <% likes.forEach(post=>{%>
+    </section>
+
+    <section>
+        <p class="posts_types">Likes</p>
+        <div class="posts">
+            <%for(let i=0;i<6;i++ ) {%>
                 <div class="card">
-                    <img src="<%= post.imageUrl %>">
-                    <%= post.createdAt %>
-                        <%= post.message %>
+                    <img class="card_image" src="<%= likes[i].imageUrl %>">
+                    <div class="card_body">
+                        <h4>
+                            <%=name%>
+                        </h4>
+                        <h4>
+                            <%= likes[i].createdAt %>
+                        </h4>
+                        <p class="message">
+                            <%= likes[i].message %>
+                        </p>
+                    </div>
                 </div>
-                <%})%>
-
+                <%}%>
         </div>
+    </section>
 
+    <section>
+        <p class="posts_types">Dislikes</p>
+        <div class="posts">
 
-        <div class="post">
-            <h3>Dislikes</h3>
-            <% dislikes.forEach(post=>{%>
+            <%for(let i=0;i<6;i++ ) {%>
                 <div class="card">
-                    <img src="<%= post.imageUrl %>">
-                    <%= post.createdAt %>
-                        <%= post.message %>
+                    <img class="card_image" src="<%= dislikes[i].imageUrl %>">
+                    <div class="card_body">
+                        <h4>
+                            <%=name%>
+                        </h4>
+                        <h4>
+                            <%= dislikes[i].reatedAt %>
+                        </h4>
+                        <p class="message">
+                            <%= dislikes[i].message %>
+                        </p>
+                    </div>
                 </div>
-                <%})%>
+                <%}%>
         </div>
-    </div>
+    </section>
+
 
 </main>
 <footer><%- include('_footer') -%></footer>

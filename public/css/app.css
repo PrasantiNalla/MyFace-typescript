@@ -1,12 +1,75 @@
-/* post_list CSS */
+/* postlist css */
+
 #like:hover {
     background-color: green;
+
 }
 
 #dislike:hover {
-    background-color: rgb(183, 32, 32);
+    background-color: red;
 }
 
+ol {
+    text-decoration: none;
+    padding: 15px;
+}
+
+
+
+/* header CSS */
+
+.header-nav {
+    /* position: static;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; */
+    padding: 15px 15px;
+    font-size: 15px;
+    background-color: #151820;
+    max-width: 100%;
+
+}
+
+.user-nav {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 80%;
+}
+
+.headerposts,
+.users,
+.home {
+
+    justify-content: center;
+    color: white;
+    /* margin: auto;
+    margin-left: auto;
+    margin-right: auto; */
+}
+
+.newpost {
+    justify-content: start;
+    color: white;
+
+}
+
+.myface {
+    justify-content: end;
+    color: white;
+
+}
+
+@media (min-width: 320px) {
+    html {
+        /* display: flex; */
+        background-color: #252A38;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    }
+}
 
 main {
     justify-content: center;
@@ -15,134 +78,107 @@ main {
     margin: 0 auto;
 }
 
-/* header CSS */
-
-.header-nav {
-    position: static;
-    display: flex;
-    padding: 15px 15px;
-    font-size: 20px;
-    background-color: white;
-    max-width: 100%;
-
-}
-
-.posts,
-.users,
-.home {
-
-    text-align: center;
-    margin: auto;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.newpost {
-    float: right;
-
-}
-
-.myface {
-    float: left;
-
-}
-
-@media (min-width: 320px) {
-    html {
-        /* display: flex; */
-        background-color: rgb(131, 176, 204);
-        flex-wrap: wrap;
-        justify-content: space-between;
-
-    }
-}
-
 /* user_details CSS */
+/* CSS for user sectin of user_details */
+
 .user {
-    /* position: relative; */
-    /* margin: 0 auto;
-    max-width: 80%; */
-    margin-bottom: 100px;
-
-}
-
-/* .user-display-details {
-    border-radius: 10px;
-} */
-
-.cover-image {
-    display: flex;
-    object-fit: cover;
-    object-position: center;
-    max-width: 100%;
-    height: 25%;
-
-}
-
-.profile-image {
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    top: 25%;
-    left: 15%;
-
-}
-
-.name {
-    position: absolute;
-    width: 200px;
-    font-size: 20px;
-    left: 28%;
-    top: 28%;
-}
-
-.username {
-    width: 200px;
-    position: absolute;
-    font-size: 14px;
-    left: 28%;
-    top: 31%;
-}
-
-.email {
-    position: absolute;
-    margin: 0;
-    font-size: 12px;
-    left: 28%;
-    top: 34%;
-
-}
-
-.post {
+    height: 130px;
     position: relative;
-    display: flex;
-    flex-direction: row;
-    height: 25%;
-    margin: 10px;
+    margin: 0;
+    width: 100%;
+}
 
+.coverImage {
+    height: 100px;
+    width: 275px;
+    margin-top: 0;
+    margin-left: 0;
+    position: relative;
+    z-index: -2;
+    display: flex;
+
+}
+
+.profile {
+    height: 50px;
+    width: 275px;
+    display: flex;
+    top: 80px;
+    padding: 5px;
+    margin-left: 40px;
+    position: absolute;
+}
+
+.profile_image {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 30px
+}
+
+ul {
+    font-size: 0.5em;
+    color: white;
+    margin-left: 20px;
+}
+
+
+
+.posts {
+
+    height: 150px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(2, 60px);
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+    margin-bottom: 30px;
+
+}
+
+.posts_types {
+    font-size: 0.3em;
+    color: white;
 }
 
 .card {
 
-    max-width: 10%;
-    max-height: 10%;
-    flex-direction: column;
-    height: auto;
-    margin: 5px;
-    padding: 10px;
-    border: solid, 10px, black;
+    width: 80px;
+    height: 80px;
+    background-color: #151820;
+    margin-bottom: 30px;
+    overflow: scroll;
 
 }
 
-.posts-likes-dislikes img {
-    max-width: 100%;
-    max-height: 100vh;
-    height: auto;
+.card_image {
+    height: 40px;
+    width: 80px;
+}
+
+.card_body {
+    width: 80px;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.card h4 {
+    font-size: 0.1em;
+    color: white;
+}
+
+.card p {
+    font-size: 0.1em;
+    color: white;
 }
 
 /* footer CSS */
 .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     border-top: 20px;
     margin-top: 20px;
     border-top: 2px solid white;
@@ -150,15 +186,13 @@ main {
 }
 
 .techswitchLogo {
-    /* float: left; */
-    align-self: flex-start;
+
     max-width: 200px;
     max-height: 100px;
 }
 
 .softwireLogo {
-    float: right;
-    /* align-self: flex-end; */
+
     max-width: 200px;
     max-height: 100px;
 }
