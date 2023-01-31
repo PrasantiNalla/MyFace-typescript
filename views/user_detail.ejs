@@ -24,7 +24,9 @@
     </section>
 
     <section>
-        <p class="posts_types">Posts</p>
+        <p class="posts_types">
+            <%= name %>'s Posts
+        </p>
         <div class="posts">
             <%for(let i=0;i<6;i++ ) {%>
                 <div class="card">
@@ -47,7 +49,7 @@
     </section>
 
     <section>
-        <p class="posts_types">Likes</p>
+        <p class="posts_types">Posts <%= name %> liked</p>
         <div class="posts">
             <%for(let i=0;i<6;i++ ) {%>
                 <div class="card">
@@ -69,7 +71,7 @@
     </section>
 
     <section>
-        <p class="posts_types">Dislikes</p>
+        <p class="posts_types">Posts <%= name %> disliked</p>
         <div class="posts">
 
             <%for(let i=0;i<6;i++ ) {%>
