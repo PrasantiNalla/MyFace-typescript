@@ -10,17 +10,36 @@
     <section>
         <h2>Posts</h2>
 
-        <ol>
-            <% postList.results.forEach(function(post) {%>
-                <li>
+        <section class="menu-icon" id="menu-icon">
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        <div class="menu" id="menu">
+            <p> MyFace</p>
+            <a href="/posts">Home</a>
+            <a href="/posts">Posts</a>
+            <a href="/users">Users</a>
+            <a href="/posts/create">+New Post</a>
+        </div>
 
-                    <%= post.message %> - <%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss" ) %><br>
-                            <img src="<%= post.imageUrl %>">
+        <button id="my-button">change color</button>
+        <ol id="ol-id">
+            <% postList.results.forEach(function(post) {%>
+                <li class="eachPost">
+                    <div id="post-item">
+                        <p id="postmessage">
+                            <%= post.message %>
+                        </p>
+                        - <%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss" ) %><br>
+
+                            <img id="postlistImg" src="<%= post.imageUrl %>" height="300px" width="300px">
                             <form method="post" action="/posts/<%=post.id%>/like/">
                                 <button id="like" type="submit">Like </button>
                                 <button id="dislike" type="submit"
                                     formaction="/posts/<%=post.id%>/dislike/">Dislike</button>
                             </form>
+                    </div>
                 </li>
                 <% }); %>
 
