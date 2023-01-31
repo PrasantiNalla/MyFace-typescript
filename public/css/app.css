@@ -18,12 +18,12 @@ main {
 /* header CSS */
 
 .header-nav {
-    position: relative;
+    position: static;
     display: flex;
-    padding: 14px 16px;
+    padding: 15px 15px;
     font-size: 20px;
     background-color: white;
-    /* max-width: 100%; */
+    max-width: 100%;
 
 }
 
@@ -47,7 +47,7 @@ main {
 
 }
 
-@media (min-width:800px) {
+@media (min-width: 320px) {
     html {
         /* display: flex; */
         background-color: rgb(131, 176, 204);
@@ -157,8 +157,8 @@ main {
 }
 
 .softwireLogo {
-    /* float: right; */
-    align-self: flex-end;
+    float: right;
+    /* align-self: flex-end; */
     max-width: 200px;
     max-height: 100px;
 }
