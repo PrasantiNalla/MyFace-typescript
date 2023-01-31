@@ -23,50 +23,50 @@
             </p>
         </div>
     </div>
+    <div class="posts-likes-dislikes">
+        <div class="post">
+            <div>
+                <h3>
+                    <%= name%>'s Posts
+                </h3>
+            </div>
+            <br />
+            <% posts.forEach(function(post) {%>
+                <div class="card">
+                    <img src="<%= post.imageUrl %>">
 
-    <div class="post">
-        <div>
-            <h3>
-                <%= name%>'s Posts
-            </h3>
+                    <%= post.createdAt %>
+                        <%= post.message %>
+
+                </div>
+                <%})%>
+
         </div>
-        <br />
-        <% posts.forEach(function(post) {%>
-            <div class="card">
-                <img src="<%= post.imageUrl %>">
 
-                <%= post.createdAt %>
-                    <%= post.message %>
+        <div class="post">
+            <h3>Likes</h3>
+            <% likes.forEach(post=>{%>
+                <div class="card">
+                    <img src="<%= post.imageUrl %>">
+                    <%= post.createdAt %>
+                        <%= post.message %>
+                </div>
+                <%})%>
 
-            </div>
-            <%})%>
+        </div>
 
+
+        <div class="post">
+            <h3>Dislikes</h3>
+            <% dislikes.forEach(post=>{%>
+                <div class="card">
+                    <img src="<%= post.imageUrl %>">
+                    <%= post.createdAt %>
+                        <%= post.message %>
+                </div>
+                <%})%>
+        </div>
     </div>
-
-    <div class="post">
-        <h3>Likes</h3>
-        <% likes.forEach(post=>{%>
-            <div class="card">
-                <img src="<%= post.imageUrl %>">
-                <%= post.createdAt %>
-                    <%= post.message %>
-            </div>
-            <%})%>
-
-    </div>
-
-
-    <div class="post">
-        <h3>Dislikes</h3>
-        <% dislikes.forEach(post=>{%>
-            <div class="card">
-                <img src="<%= post.imageUrl %>">
-                <%= post.createdAt %>
-                    <%= post.message %>
-            </div>
-            <%})%>
-    </div>
-
 
 </main>
 <footer><%- include('_footer') -%></footer>

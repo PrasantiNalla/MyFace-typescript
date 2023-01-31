@@ -71,7 +71,7 @@ main {
 } */
 
 .cover-image {
-    /* display: flex; */
+    display: flex;
     object-fit: cover;
     object-position: center;
     max-width: 100%;
@@ -94,15 +94,15 @@ main {
     width: 200px;
     font-size: 20px;
     left: 28%;
-    top: 25%;
+    top: 28%;
 }
 
 .username {
     width: 200px;
     position: absolute;
-    font-size: 16px;
+    font-size: 14px;
     left: 28%;
-    top: 30%;
+    top: 31%;
 }
 
 .email {
@@ -110,7 +110,7 @@ main {
     margin: 0;
     font-size: 12px;
     left: 28%;
-    top: 33%;
+    top: 34%;
 
 }
 
@@ -135,7 +135,7 @@ main {
 
 }
 
-img {
+.posts-likes-dislikes img {
     max-width: 100%;
     max-height: 100vh;
     height: auto;
