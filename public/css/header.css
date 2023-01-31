@@ -1,44 +1,29 @@
+/* @import "user_detail.css";
+@import "header.css";
+@import "footer.css";
+@import "post_list.css"; */
+
 /* header CSS */
-
 .header-nav {
-    /* position: static;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around; */
-    padding: 15px 15px;
-    font-size: 15px;
-    background-color: #151820;
-    max-width: 100%;
 
+    background-color: black;
+    max-width: 100%;
+    min-height: 7%;
+    text-align: center;
 }
 
 .user-nav {
-    position: static;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
     max-width: 80%;
-}
 
-.headerposts,
-.users,
-.home {
-
-    justify-content: center;
-    color: white;
-    /* margin: auto;
-    margin-left: auto;
-    margin-right: auto; */
-}
-
-.newpost {
-    justify-content: start;
-    color: white;
-
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0 auto;
+    padding: 3px;
 }
 
 .myface {
-    justify-content: end;
+    float: left;
     color: white;
 
 }
@@ -58,7 +43,7 @@
 .menu {
     color: white;
     border: 2px solid black;
-    display: flex;
+    display: none;
     font-size: 1em;
     flex-direction: column;
     width: 200px;

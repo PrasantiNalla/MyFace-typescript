@@ -2,19 +2,22 @@
 .footer {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     border-top: 2px solid white;
-    margin-top: auto;
-}
-
-.techswitchLogo {
-    max-width: 80%;
-    width: 30%;
+    position: fixed;
+    bottom: 0;
+    width: 80%;
     height: 15%;
 }
 
+.techswitchLogo {
+    max-width: 60%;
+    max-height: 60%;
+
+}
+
 .softwireLogo {
-    max-width: 80%;
-    width: 35%;
-    height: 18%;
+    max-width: 60%;
+    max-height: 60%;
+
 }

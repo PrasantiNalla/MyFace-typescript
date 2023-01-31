@@ -1,13 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Add your JavaScript here.
-  const mybutton = document.getElementById("my-button");
 
-  const postColor = document.getElementsByClassName("eachPost");
-  mybutton.addEventListener("click", function () {
-    for (let i = 0; i < postColor.length; i++) {
-      postColor[i].style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`
-    }
-  });
 
 
   // menu icon event listener
@@ -18,6 +11,15 @@ document.addEventListener("DOMContentLoaded", function () {
       menu.style.display = "flex";
     } else {
       menu.style.display = "none";
+    }
+  });
+
+  const mybutton = document.getElementById("my-button");
+
+  const postColor = document.getElementsByClassName("eachPost");
+  mybutton.addEventListener("click", function () {
+    for (let i = 0; i < postColor.length; i++) {
+      postColor[i].style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`
     }
   });
 
