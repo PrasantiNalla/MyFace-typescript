@@ -1,0 +1,25 @@
+/* postlist css */
+
+#like:hover {
+    background-color: green;
+
+}
+
+#dislike:hover {
+    background-color: red;
+}
+
+h2 {
+    color: white
+}
+
+ol {
+    text-decoration: none;
+    padding: 15px;
+    color: white;
+}
+
+.postlistImg {
+    height: 300px;
+    width: 300px;
+}

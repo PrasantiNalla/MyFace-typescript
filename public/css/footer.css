@@ -1,0 +1,20 @@
+/* footer CSS */
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-top: 2px solid white;
+    margin-top: auto;
+}
+
+.techswitchLogo {
+    max-width: 80%;
+    width: 30%;
+    height: 15%;
+}
+
+.softwireLogo {
+    max-width: 80%;
+    width: 35%;
+    height: 18%;
+}
