@@ -13,6 +13,17 @@ document.addEventListener("DOMContentLoaded", function () {
       menu.style.display = "none";
     }
   });
+  const backgroundElements = document.querySelectorAll('main> *:not(#menu-icon)');
+
+  for (let i = 0; i < backgroundElements.length; i++) {
+    backgroundElements[i].addEventListener('click', () => {
+      let menu = document.getElementById('menu');
+      if (menu.style.display !== "none") {
+        menu.style.display = "none";
+      }
+
+    });
+  }
 
   const mybutton = document.getElementById("my-button");
 
@@ -24,3 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+
+
+

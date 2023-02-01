@@ -5,7 +5,7 @@
 <nav>
     <%- include('_header') -%>
 </nav>
-<main>
+<main class="userdetails-main">
     <section class="user">
 
         <img class="coverImage" src="<%= coverImageUrl %>" alt="cover image">
@@ -30,7 +30,9 @@
         <div class="posts">
             <%for(let i=0;i<6;i++ ) {%>
                 <div class="card">
-                    <img class="card_image" src="<%= posts[i].imageUrl %>">
+                    <img class="card_image" src="<%= posts[i].imageUrl %>"
+                        onerror="src =
+                    'https://static.vecteezy.com/system/resources/previews/005/337/799/original/icon-image-not-found-free-vector.jpg';" alt="User uploaded image">
                     <div class="card_body">
                         <h4>
                             <%=name%>
@@ -53,7 +55,9 @@
         <div class="posts">
             <%for(let i=0;i<6;i++ ) {%>
                 <div class="card">
-                    <img class="card_image" src="<%= likes[i].imageUrl %>">
+                    <img class="card_image" src="<%= likes[i].imageUrl %>"
+                        onerror="src =
+                    'https://static.vecteezy.com/system/resources/previews/005/337/799/original/icon-image-not-found-free-vector.jpg';" alt="User uploaded image">
                     <div class="card_body">
                         <h4>
                             <%=name%>
@@ -76,7 +80,9 @@
 
             <%for(let i=0;i<6;i++ ) {%>
                 <div class="card">
-                    <img class="card_image" src="<%= dislikes[i].imageUrl %>">
+                    <img class="card_image" src="<%= dislikes[i].imageUrl %>"
+                        onerror="src =
+                    'https://static.vecteezy.com/system/resources/previews/005/337/799/original/icon-image-not-found-free-vector.jpg';" alt="User uploaded image">
                     <div class="card_body">
                         <h4>
                             <%=name%>

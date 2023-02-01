@@ -1,28 +1,29 @@
 /* user_details CSS */
 /* CSS for user sectin of user_details */
 
+.userdetails-main {
+    padding-top: 0%;
+}
+
 .user {
     position: relative;
-    margin: 0;
-    width: 100%;
+    /* margin: 0; */
+    /* top: 12%; */
+    width: 80%;
     height: 25%;
+    padding-top: 7%;
+
 }
 
 .coverImage {
     height: 100%;
     width: 100%;
-    margin-top: 0;
-    margin-left: 0;
-    position: relative;
-    align-self: center;
-    display: flex;
-
 }
 
 .profile {
     height: 10%;
     /* display: flex; */
-    top: 150px;
+    top: 73%;
     padding: 5px;
     margin-left: 40px;
     position: absolute;
@@ -51,6 +52,7 @@
     flex-direction: row;
     height: 25%;
     margin: 10px;
+    overflow: scroll;
 
 }
 

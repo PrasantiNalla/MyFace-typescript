@@ -1,12 +1,19 @@
 /* postlist css */
 
-#like:hover {
+/* #likedislike {
+    text-align: center;
+} */
+
+#like {
+
     background-color: green;
+    border-radius: 15px;
 
 }
 
-#dislike:hover {
+#dislike {
     background-color: red;
+    border-radius: 15px;
 }
 
 h2 {
@@ -19,7 +26,7 @@ ol {
     color: white;
 }
 
-.postlistImg {
-    height: 300px;
-    width: 300px;
+#postlistImg {
+    height: 40%;
+    width: 30%;
 }

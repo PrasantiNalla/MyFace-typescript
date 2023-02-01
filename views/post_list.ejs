@@ -7,7 +7,7 @@
     <%- include('_header') -%>
 </nav>
 
-<main>
+<main id="postlist-main">
     <section>
         <h2>Posts</h2>
         <button id="my-button">change color</button>
@@ -15,17 +15,19 @@
             <% postList.results.forEach(function(post) {%>
                 <li class="eachPost">
                     <div id="post-item">
-                        <p id="postmessage">
-                            <%= post.message %>
-                        </p>
-                        - <%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss" ) %><br>
 
-                            <img id="postlistImg" src="<%= post.imageUrl %>" height="300px" width="300px">
-                            <form method="post" action="/posts/<%=post.id%>/like/">
-                                <button id="like" type="submit">Like </button>
-                                <button id="dislike" type="submit"
-                                    formaction="/posts/<%=post.id%>/dislike/">Dislike</button>
-                            </form>
+                        <%= post.message %>
+                            - <%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss" ) %><br>
+                                <!-- <img id="postlistImg"   src="<%= post.imageUrl %>" height="300px" width="300px"> -->
+                                <img id="postlistImg" src=<%=post.imageUrl %> onerror="src =
+                                'https://static.vecteezy.com/system/resources/previews/005/337/799/original/icon-image-not-found-free-vector.jpg';"
+                                alt="User uploaded image"><br>
+
+                                <form id ="likedislike" method="post" action="/posts/<%=post.id%>/like/">
+                                    <button id="like" type="submit">Like </button>
+                                    <button id="dislike" type="submit"
+                                        formaction="/posts/<%=post.id%>/dislike/">Dislike</button>
+                                </form>
                     </div>
                 </li>
                 <% }); %>

@@ -6,29 +6,36 @@
 /* header CSS */
 .header-nav {
 
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 8%;
     background-color: black;
-    max-width: 100%;
-    min-height: 7%;
-    text-align: center;
 }
 
 .user-nav {
-    max-width: 80%;
-
+    /* max-width: 80%; */
+    /* justify-content: space-between; */
     align-items: center;
     text-align: center;
     vertical-align: middle;
     margin: 0 auto;
     padding: 3px;
+    width: 80%;
 }
 
 .myface {
+    /* justify-content: flex-start; */
     float: left;
-    color: white;
+
 
 }
 
 .menu-icon {
+    /* justify-content: flex-end; */
     float: right;
 }
 
@@ -38,6 +45,7 @@
     height: 3px;
     background-color: white;
     margin: 3px 0;
+
 }
 
 .menu {
